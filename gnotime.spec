@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	glib-devel
 BuildRequires:	guile-devel
 BuildRequires:	libgnomeui-devel
-BuildRequires:	libgtkhtml-devel
+BuildRequires:	libgtkhtml-devel >= 3.0.0
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
