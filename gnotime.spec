@@ -15,9 +15,9 @@ URL:		http://www.linas.org/linux/gtt/gtt.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 # AM_PATH_GLIB macro (abused?)
-BuildRequires:	glib-devel >= -1.2.10
-BuildRequires:	guile-devel >= 1.6.4
+BuildRequires:	glib-devel >= 1.2.10
 BuildRequires:	gtkhtml-devel >= 3.2.3
+BuildRequires:	guile-devel >= 1.6.4
 BuildRequires:	libgnomeui-devel >= 2.8.0
 BuildRequires:	libgtkhtml-devel >= 2.6.2
 BuildRequires:	libtool
@@ -46,13 +46,13 @@ pakietu.
 %package devel
 Summary:	Header files for GnomeTime
 Summary:	Pliki nag³ówkowe GnomeTime
-Group:		Development
+Group:		Development/Libraries
 
 %description devel
-Header files for GnomeTime
+Header files for GnomeTime.
 
 %description -l pl devel
-Pliki nag³ówkowe GnomeTime
+Pliki nag³ówkowe GnomeTime.
 
 %prep
 %setup -q
@@ -91,4 +91,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/%{name}/*.h
+%{_includedir}/%{name}
