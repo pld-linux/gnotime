@@ -53,7 +53,7 @@ Requires:	%{name} = %{version}-%{release}
 %description devel
 Header files for GnomeTime.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe GnomeTime.
 
 %package static
