@@ -14,13 +14,11 @@ Source0:	http://dl.sourceforge.net/gttr/%{name}-%{version}.tar.gz
 URL:		http://www.linas.org/linux/gtt/gtt.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-# AM_PATH_GLIB macro (abused?)
-BuildRequires:	glib-devel >= 1.2.10
 BuildRequires:	gtkhtml-devel >= 3.2.3
 BuildRequires:	guile-devel >= 1.6.4
 BuildRequires:	libgnomeui-devel >= 2.8.0
-BuildRequires:	libgtkhtml-devel >= 2.6.2
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 Requires(post):	GConf2
 Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	/usr/bin/scrollkeeper-update
