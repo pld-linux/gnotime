@@ -10,10 +10,11 @@ Source0:	http://dl.sourceforge.net/gttr/%{name}-%{version}.tar.gz
 URL:		http://www.linas.org/linux/gtt/gtt.html
 BuildRequires:	autoconf
 BuildRequires:	automake
+# AM_PATH_GLIB macro (abused?)
 BuildRequires:	glib-devel
-BuildRequires:	guile-devel
-BuildRequires:	libgnomeui-devel
-BuildRequires:	libgtkhtml-devel >= 3.0.0
+BuildRequires:	guile-devel >= 1.3.4
+BuildRequires:	libgnomeui-devel >= 2.0.3
+BuildRequires:	libgtkhtml-devel >= 2.0.0
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
