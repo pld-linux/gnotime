@@ -111,7 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_omf_dest_dir}/%{name}
 %{_datadir}/%{name}
 %{_mandir}/man1/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 
 %files devel
 %defattr(644,root,root,755)
