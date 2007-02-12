@@ -3,7 +3,7 @@
 # fix desktop file
 
 Summary:	GnoTime - a time tracker
-Summary(pl):	GnoTime - program do ¶ledzenia czasu
+Summary(pl.UTF-8):   GnoTime - program do Å›ledzenia czasu
 Name:		gnotime
 Version:	2.2.1
 Release:	0.1
@@ -34,38 +34,38 @@ GnoTime used to be called GTT and GTimeTracker, and used to be a part
 of gnome-utils, before being renamed and split out into its own
 package.
 
-%description -l pl
-GnoTime jest kombinacj± stopera, pamiêtnika, systemu rozliczeniowego
-i zarz±dcy projektu. Mo¿esz odmierzaæ czas spêdzony nad zadaniem,
-zwi±zaæ z nim notatnik, ustawiæ przelicznik kosztów, wydrukowaæ
-fakturê, jak równie¿ ¶ledziæ status innych projektów.
+%description -l pl.UTF-8
+GnoTime jest kombinacjÄ… stopera, pamiÄ™tnika, systemu rozliczeniowego
+i zarzÄ…dcy projektu. MoÅ¼esz odmierzaÄ‡ czas spÄ™dzony nad zadaniem,
+zwiÄ…zaÄ‡ z nim notatnik, ustawiÄ‡ przelicznik kosztÃ³w, wydrukowaÄ‡
+fakturÄ™, jak rÃ³wnieÅ¼ Å›ledziÄ‡ status innych projektÃ³w.
 
-GnoTime by³ kiedy¶ nazywany GTT lub GTimeTracker i stanowi³ czê¶æ
-gnome-utils, zanim zosta³ przemianowany i oddzieli³ siê do osobnego
+GnoTime byÅ‚ kiedyÅ› nazywany GTT lub GTimeTracker i stanowiÅ‚ czÄ™Å›Ä‡
+gnome-utils, zanim zostaÅ‚ przemianowany i oddzieliÅ‚ siÄ™ do osobnego
 pakietu.
 
 %package devel
 Summary:	Header files for GnomeTime libraries
-Summary(pl):	Pliki nag³ówkowe bibliotek GnomeTime
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe bibliotek GnomeTime
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for GnomeTime.
 
-%description devel -l pl
-Pliki nag³ówkowe GnomeTime.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe GnomeTime.
 
 %package static
 Summary:	Static GnomeTime libraries
-Summary(pl):	Statyczne biblioteki GnomeTime
+Summary(pl.UTF-8):   Statyczne biblioteki GnomeTime
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static GnomeTime libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki GnomeTime.
 
 %prep
