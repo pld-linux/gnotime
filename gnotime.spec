@@ -3,7 +3,7 @@
 # fix desktop file
 
 Summary:	GnoTime - a time tracker
-Summary(pl.UTF-8):   GnoTime - program do śledzenia czasu
+Summary(pl.UTF-8):	GnoTime - program do śledzenia czasu
 Name:		gnotime
 Version:	2.2.1
 Release:	0.1
@@ -46,7 +46,7 @@ pakietu.
 
 %package devel
 Summary:	Header files for GnomeTime libraries
-Summary(pl.UTF-8):   Pliki nagłówkowe bibliotek GnomeTime
+Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek GnomeTime
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -58,7 +58,7 @@ Pliki nagłówkowe GnomeTime.
 
 %package static
 Summary:	Static GnomeTime libraries
-Summary(pl.UTF-8):   Statyczne biblioteki GnomeTime
+Summary(pl.UTF-8):	Statyczne biblioteki GnomeTime
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
