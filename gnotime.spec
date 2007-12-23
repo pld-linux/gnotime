@@ -5,12 +5,13 @@
 Summary:	GnoTime - a time tracker
 Summary(pl.UTF-8):	GnoTime - program do śledzenia czasu
 Name:		gnotime
-Version:	2.2.1
+Version:	2.2.3
 Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/gttr/%{name}-%{version}.tar.gz
-# Source0-md5:	e2aad191b62b41da7f2176a028f1aaf9
+# Source0-md5:	067c3579411cd98e0b18fec0b36475a6
+Patch0:		%{name}-gtkhtml.patch
 URL:		http://www.linas.org/linux/gtt/gtt.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -19,6 +20,7 @@ BuildRequires:	guile-devel >= 1.6.4
 BuildRequires:	libgnomeui-devel >= 2.8.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+BuildRequires:	qof-devel
 Requires(post):	GConf2
 Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	/usr/bin/scrollkeeper-update
@@ -44,32 +46,9 @@ GnoTime był kiedyś nazywany GTT lub GTimeTracker i stanowił część
 gnome-utils, zanim został przemianowany i oddzielił się do osobnego
 pakietu.
 
-%package devel
-Summary:	Header files for GnomeTime libraries
-Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek GnomeTime
-Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-
-%description devel
-Header files for GnomeTime.
-
-%description devel -l pl.UTF-8
-Pliki nagłówkowe GnomeTime.
-
-%package static
-Summary:	Static GnomeTime libraries
-Summary(pl.UTF-8):	Statyczne biblioteki GnomeTime
-Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
-
-%description static
-Static GnomeTime libraries.
-
-%description static -l pl.UTF-8
-Statyczne biblioteki GnomeTime.
-
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -106,19 +85,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %{_sysconfdir}/gconf/schemas/*.schemas
 %{_omf_dest_dir}/%{name}
 %{_datadir}/%{name}
 %{_mandir}/man1/*
 %{_desktopdir}/*.desktop
-
-%files devel
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/%{name}
-
-%files static
-%defattr(644,root,root,755)
-%{_libdir}/lib*.a
