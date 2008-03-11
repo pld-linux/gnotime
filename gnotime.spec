@@ -5,18 +5,18 @@
 Summary:	GnoTime - a time tracker
 Summary(pl.UTF-8):	GnoTime - program do śledzenia czasu
 Name:		gnotime
-Version:	2.2.3
-Release:	0.1
+Version:	2.3.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/gttr/%{name}-%{version}.tar.gz
-# Source0-md5:	067c3579411cd98e0b18fec0b36475a6
-Patch0:		%{name}-gtkhtml.patch
+# Source0-md5:	dd92b8c8a1f45e33000a3e14f227bcf8
 URL:		http://www.linas.org/linux/gtt/gtt.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtkhtml-devel >= 3.2.3
 BuildRequires:	guile-devel >= 1.6.4
+BuildRequires:  libcap-devel
 BuildRequires:	libgnomeui-devel >= 2.8.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -48,7 +48,6 @@ pakietu.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
